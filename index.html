@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FGV Compensandos - Compensados e Madeiras de Qualidade</title>
+    <meta name="description" content="Fabricação de compensados, madeira laminada e chapas de madeira em São Mateus do Sul - PR. Qualidade e tradição em madeiras.">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #5D4037;
+            --primary-dark: #3E2723;
+            --secondary: #2E5A1E;
+            --accent: #F9A825;
+            --light: #F5F0E6;
+            --white: #ffffff;
+            --gray: #6c757d;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            padding-top: 70px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+        .navbar {
+            background-color: rgba(255,255,255,0.97);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary) !important;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+        .navbar-brand span {
+            color: var(--secondary);
+        }
+        .nav-link {
+            color: var(--primary-dark) !important;
+            font-weight: 600;
+            margin: 0 8px;
+            transition: 0.3s;
+        }
+        .nav-link:hover {
+            color: var(--secondary) !important;
+        }
+        .btn-whatsapp {
+            background-color: #25D366;
+            border: none;
+            color: white;
+            font-weight: 600;
+            border-radius: 50px;
+            padding: 10px 25px;
+            transition: 0.3s;
+        }
+        .btn-whatsapp:hover {
+            background-color: #1da851;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37,211,102,0.3);
+        }
+        .btn-primary-custom {
+            background-color: var(--primary);
+            border: none;
+            border-radius: 50px;
+            padding: 12px 35px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .btn-primary-custom:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(93,64,55,0.3);
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1200') center/cover no-repeat;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        .hero h1 {
+            color: white;
+            font-size: 3rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+        }
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            margin: 15px auto 0;
+        }
+        .card-product {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .card-product:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        .card-product .card-img-top {
+            height: 220px;
+            object-fit: cover;
+        }
+        .contact-info i {
+            color: var(--secondary);
+            width: 30px;
+            margin-right: 10px;
+        }
+        footer {
+            background-color: var(--primary-dark);
+            color: #ddd;
+        }
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.9);
+            color: white;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 9999;
+            font-size: 0.9rem;
+        }
+        .cookie-consent button {
+            background: var(--accent);
+            border: none;
+            color: #000;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .cookie-consent { flex-direction: column; gap: 10px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <i class="fas fa-tree me-2"></i>FGV <span>Compensandos</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+                <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                <li class="nav-item ms-2">
+                    <a class="btn btn-whatsapp" href="https://wa.me/5542984312173?text=Olá%20FGV%20Compensandos,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos" target="_blank">
+                        <i class="fab fa-whatsapp me-1"></i> WhatsApp
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header id="home" class="hero">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Qualidade em Compensados e Madeiras</h1>
+        <p class="lead">Fabricação de madeira laminada, chapas compensadas e aglomerados. Tradição e resistência desde 2021.</p>
+        <a href="https://wa.me/5542984312173?text=Olá!%20Quero%20um%20orçamento" target="_blank" class="btn btn-whatsapp btn-lg me-3">
+            <i class="fab fa-whatsapp me-2"></i>Solicitar Orçamento
+        </a>
+        <a href="tel:+554235326964" class="btn btn-outline-light btn-lg rounded-pill">
+            <i class="fas fa-phone-alt me-2"></i>Ligar Agora
+        </a>
+    </div>
+</header>
+
+<!-- Produtos Section -->
+<section id="produtos" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center section-title">Nossos Produtos</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card card-product text-center p-4">
+                    <i class="fas fa-layer-group feature-icon"></i>
+                    <h4>Compensado Laminado</h4>
+                    <p>Chapas de madeira compensada com alta resistência e acabamento premium, ideais para construção civil e indústria moveleira.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-product text-center p-4">
+                    <i class="fas fa-cubes feature-icon"></i>
+                    <h4>Madeira Aglomerada</h4>
+                    <p>Painéis de partículas de madeira prensada, uniformes e estáveis, para móveis e divisórias.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-product text-center p-4">
+                    <i class="fas fa-tree feature-icon"></i>
+                    <h4>Madeira Bruta e Beneficiada</h4>
+                    <p>Fornecimento de madeira serrada, seca e tratada para diversas aplicações.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Diferenciais -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center section-title">Por que escolher a FGV?</h2>
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600" alt="Madeira de qualidade" class="img-fluid rounded-4 shadow">
+            </div>
+            <div class="col-lg-6">
+                <div class="d-flex mb-4">
+                    <i class="fas fa-check-circle feature-icon me-3" style="font-size: 2.5rem;"></i>
+                    <div>
+                        <h5>Madeira Certificada</h5>
+                        <p>Matéria-prima de origem legal e sustentável, garantindo responsabilidade ambiental.</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-4">
+                    <i class="fas fa-industry feature-icon me-3" style="font-size: 2.5rem;"></i>
+                    <div>
+                        <h5>Equipamentos Modernos</h5>
+                        <p>Parque industrial atualizado para entregar precisão e agilidade.</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-4">
+                    <i class="fas fa-truck feature-icon me-3" style="font-size: 2.5rem;"></i>
+                    <div>
+                        <h5>Entrega Pontual</h5>
+                        <p>Logística eficiente em São Mateus do Sul e região.</p>
+                    </div>
+                </div>
+                <a href="sobre.html" class="btn btn-primary-custom">Saiba mais sobre nós</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contato Section -->
+<section id="contato" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center section-title">Fale Conosco</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                            <div class="contact-info mb-3">
+                                <i class="fas fa-map-marker-alt fa-2x"></i>
+                                <p class="d-inline ms-2">Colônia Cachoeira, SN - Brcao 1<br>São Mateus do Sul - PR, 83900-000</p>
+                            </div>
+                            <div class="contact-info mb-3">
+                                <i class="fas fa-phone fa-2x"></i>
+                                <a href="tel:+554235326964" class="ms-2 text-dark text-decoration-none">(42) 3532-6964</a>
+                            </div>
+                            <div class="contact-info mb-3">
+                                <i class="fas fa-envelope fa-2x"></i>
+                                <a href="mailto:francieligrittem09@gmail.com" class="ms-2 text-dark text-decoration-none">francieligrittem09@gmail.com</a>
+                            </div>
+                            <div class="mt-4 d-grid gap-2">
+                                <a href="https://wa.me/5542984312173" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp me-2"></i> (42) 98431-2173</a>
+                                <a href="tel:+554235326964" class="btn btn-outline-dark rounded-pill"><i class="fas fa-phone-alt me-2"></i> Ligar Fixo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                            <h5>Horário de Atendimento</h5>
+                            <p><i class="far fa-clock me-2"></i> Segunda a Sexta: 08h às 18h</p>
+                            <p><i class="far fa-clock me-2"></i> Sábado: 08h às 12h</p>
+                            <hr>
+                            <p class="small">CNPJ: 41.792.346/0001-57<br>IE PR: 90926771-49</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5 class="text-white">FGV Compensandos</h5>
+                <p class="small">F G Valente Indústria e Comércio de Compensados e Madeiras LTDA<br>Fabricando qualidade em madeira desde 2021.</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5 class="text-white">Links Úteis</h5>
+                <ul class="list-unstyled">
+                    <li><a href="sobre.html">Sobre a Empresa</a></li>
+                    <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+                    <li><a href="termos-de-uso.html">Termos de Uso</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5 class="text-white">Redes Sociais</h5>
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+            </div>
+        </div>
+        <hr class="border-secondary">
+        <p class="text-center small mb-0">© 2025 FGV Compensandos - Todos os direitos reservados. | São Mateus do Sul - PR</p>
+    </div>
+</footer>
+
+<!-- Cookie Consent -->
+<div id="cookieConsent" class="cookie-consent">
+    <span>Utilizamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="politica-de-privacidade.html" class="text-warning">Política de Privacidade</a>.</span>
+    <button onclick="document.getElementById('cookieConsent').style.display='none'">Entendi</button>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
